@@ -1,8 +1,7 @@
 import sys
-sys.stdin = open("input.txt","r")
+sys.stdin = open("input.txt", "r")
 
 T = int(input())
-lst2 = []
 
 for test_case in range(1, T+1):
     N = int(input())
@@ -11,14 +10,15 @@ for test_case in range(1, T+1):
     lst = lst[::-1]
     bst_price = lst[0]
     bst_b = 0
+    i = 0
 
-    for i in lst:
-        if i < bst_price:
-            bst_b += bst_price - i
+    while i < N:
+        if lst[i] < bst_price:
+            bst_b += bst_price - lst[i]
         else:
-            bst_price = i
+            bst_price = lst[i]
 
-    lst2.append(f"#{test_case} {bst_b}")
+        i += 1
 
-for i in lst2:
-    print(i)
+    print(f"#{test_case} {bst_b}")
+
