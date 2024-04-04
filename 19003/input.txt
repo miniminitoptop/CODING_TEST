@@ -1,7 +1,5 @@
-1
-5 6
-aaahhh
-bbbbbb
-hhhaaa
-bbbbbb
-dddddd
+2
+3 7
+racecar
+abcdcba
+ioioioi

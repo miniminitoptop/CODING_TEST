@@ -1,0 +1,30 @@
+5
+12 3
+abc
+ded
+cba
+abc
+ded
+cba
+abc
+ded
+cba
+abc
+ded
+cba
+3 7
+racecar
+abcdcba
+ioioioi
+2 3
+abb
+bba
+3 3
+abc
+ded
+cba
+4 5
+hello
+exper
+tacad
+emyyy
