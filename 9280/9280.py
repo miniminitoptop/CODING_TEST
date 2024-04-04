@@ -3,8 +3,8 @@ sys.stdin = open("input.txt","r")
 
 T = int(input())
 
-for test_case in range (1,T+1):
-    N, M = map(int,input().split())
+for test_case in range(1, T+1):
+    N, M = map(int, input().split())
     lst1 = [0 for _ in range(N)]
     lst2 = [0 for _ in range(M)]
     lst3 = [0 for _ in range(2*M)]
