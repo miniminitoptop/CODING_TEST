@@ -14,10 +14,6 @@ for test_case in range(1, T+1):
         lst.insert(0,mnt)
         max_val = max(max_val,int("".join(list(map(str, lst)))))
 
-    lst =
-
-
-
 
     # cnt = 0
     #
