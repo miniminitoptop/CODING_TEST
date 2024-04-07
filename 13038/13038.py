@@ -18,6 +18,7 @@ for test_case in range(1, T+1):
     arr[0] += n
     print(arr)
 
+<<<<<<< HEAD
     q, r = divmod(N, num)
 
     res = q * 7
@@ -32,6 +33,8 @@ for test_case in range(1, T+1):
             print(arr[i:i + r - 1])
             s = min(s, sum(arr[i:i + r - 1]))
         res += s + 1
+=======
+>>>>>>> a883bb96fc7ceb36039590a1b38cbe31424300aa
 
     print(f"#{test_case} {res}")
 
