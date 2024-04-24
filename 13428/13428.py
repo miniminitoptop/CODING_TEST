@@ -1,24 +1,27 @@
 import sys
-sys.stdin = open("input.txt","r")
+sys.stdin = open("input.txt", "r")
 
 T = int(input())
 
-for test_case in range(1,T+1):
-    N = list(map(int, input()))
-    M = list(map(int, N[::-1]))
-
-    max_idx = len(M)-1-M.index(max(M[0:]))
-    min_idx = len(M)-1-M.index(min(M[0:]))
+for test_case in range(1, T+1):
+    N = list(input())
+    min_val = max_val = int("".join(N))
+    min_ans = max_ans = "".join(N)
 
     for i in range(len(N)):
-        print(max_idx, min_idx)
 
-        if i == min_idx:
-            min_idx = len(M)-1-M.index(min(M[0:(len(M)-i)]))
-            print(min_idx)
+        for j in range(i+1, len(N)):
+            N[i], N[j] = N[j], N[i]
 
-    # min_num = "".join(list(map(str, N)))
-    # max_num = "".join(list(map(str, N)))
-    # print(min_num, max_num)
+            if int("".join(N)) >= max_val:
+                max_val = int("".join(N))
+                max_ans = "".join(N)
 
+            elif N[0] != "0" and int("".join(N)) <= min_val:
+                min_val = int("".join(N))
+                min_ans = ("".join(N))
+
+            N[i], N[j] = N[j], N[i]
+
+    print(f"#{test_case} {min_ans} {max_ans}")
 
