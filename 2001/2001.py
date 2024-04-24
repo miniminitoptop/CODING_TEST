@@ -19,12 +19,13 @@ for test_case in range(1, int(input())+1):
             ans = max(ans, max(lst1))
 
             if cnt == M:
+                print(lst1)
                 lst1[k] -= sum(lst[j-M+1][k:M+k])
 
         if cnt == M:
             cnt -= 1
 
-    print(f"#{test_case} {ans}")
+    # print(f"#{test_case} {ans}")
 
 
 
