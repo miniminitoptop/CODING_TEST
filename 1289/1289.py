@@ -2,7 +2,7 @@ import sys
 sys.stdin = open("input.txt", "r")
 
 for test_case in range(1, int(input())+1):
-    lst = list(map(int,input()))
+    lst = list(map(int, input()))
 
     i = 0
     ans = 0
@@ -14,8 +14,7 @@ for test_case in range(1, int(input())+1):
 
         if lst[i] == 1:
             ans += 1
-            for j in range(i, len(lst)):
-                lst[j] = lst[j] ^ 1
+            lst = lst[0:i] + [j ^ 1 for j in lst[i:]]
 
         i += 1
 

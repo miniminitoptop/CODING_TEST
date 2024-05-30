@@ -36,6 +36,7 @@ for test_case in range(1, T + 1):
 
     for i in M:
         lst.append(i)
+
     dfs(0)
 
 

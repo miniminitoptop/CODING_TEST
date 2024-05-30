@@ -20,6 +20,7 @@ def dfs(n, l2, pt1, pt2):
             pt2 += (n+l2[i])
 
         lst3 = [s for s in l2 if s != l2[i]]
+        print(lst3)
         dfs(n+1, lst3, pt1, pt2)
 
         pt1, pt2 = mnt1, mnt2
@@ -30,6 +31,7 @@ T = int(input())
 for test_case in range(1,T+1):
     lst = list(map(int,input().split()))
     lst2 = [i for i in range(1, 19) if i not in lst]
+    print(lst2)
 
     win_cnt = 0
     lose_cnt = 0
